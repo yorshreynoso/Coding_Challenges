@@ -1,0 +1,10 @@
+{
+    "configurations": [
+        {
+            "type": "chrome",
+            "name": "confirm",
+            "request": "launch",
+            "url": "confirm"
+        }
+    ]
+}
