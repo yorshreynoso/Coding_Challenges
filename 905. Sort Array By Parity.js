@@ -47,7 +47,7 @@ var sortArrayByParity = function(nums) {
  */
 var sortArrayByParity2 = function(nums) {
     let ordered = [];
-    nums.forEach( num => (num %2 == 0 ) ? ordered.unshift(num) : ordered.push(num) );
+    nums.filter( num => (num %2 == 0 ) ? ordered.unshift(num) : ordered.push(num) );
     return ordered;
 };
 
