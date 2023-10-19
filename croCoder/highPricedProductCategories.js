@@ -69,3 +69,22 @@ console.log(avgPriceByCategory);
 
 
 
+//reducing code
+
+const productsByCategory2 = products.reduce((acc, product) => {
+    const category = product.category; 
+    if(!acc[category]) {
+        acc[category] = [];
+    }
+    acc[category].push(product);
+    return acc;
+},{});
+
+//Object.keys() return an array of the keys, in this case Electronic and Clothes
+const avgPriceByCategory2 = Object.keys(productsByCategory).map(category => {
+    const sum = productsByCategory[category].reduce((acc, product) => acc + product.price, 0);
+    return { category: category, average: sum / productsByCategory[category].length }
+});
+
+console.log(avgPriceByCategory2);
+
